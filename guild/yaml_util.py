@@ -22,7 +22,7 @@ import yaml
 
 
 def encode_yaml(val, default_flow_style=False):
-    encoded = yaml.safe_dump(val, default_flow_style=default_flow_style, indent=2)
+    encoded = yaml.safe_dump(val, default_flow_style=default_flow_style, indent=2, sort_keys=False)
     return _strip_encoded_yaml(encoded)
 
 

@@ -384,7 +384,7 @@ def _format_attr_dict(d):
 
 
 def _format_yaml_block(val):
-    formatted = yaml.dump(val, default_flow_style=False)
+    formatted = yaml.dump(val, default_flow_style=False, sort_keys=False)
     lines = formatted.split("\n")
     padded = ["  " + line for line in lines]
     return "\n" + "\n".join(padded).rstrip()
