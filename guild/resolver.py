@@ -427,7 +427,7 @@ class ConfigResolver(FileResolver):
     @staticmethod
     def _yaml_load(path):
         with open(path) as f:
-            return yaml.safe_load(f)
+            return yaml.safe_load(f, sort_keys=False)
 
     @staticmethod
     def _json_load(path):
